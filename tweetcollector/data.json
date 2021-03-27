@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "governador": "@wilsonlimaAM",
+            "governo": "@AmazonasGoverno",
+            "estado": "Amazonas"
+        },
+
+        {
+            "governador": "@PauloCamara40",
+            "governo": "@governope",
+            "estado": "Pernambuco"
+        },
+
+        {
+            "governador": "@ronaldocaiado",
+            "governo": "@governogoias",
+            "estado": "Goias"
+        },
+
+        {
+            "governador": "@CarlosMoises",
+            "governo": "@GovSC",
+            "estado": "Santa Catarina"
+        },
+        
+        {
+            "governador": "@jdoriajr",
+            "governo": "@governosp",
+            "estado": "Sao Paulo"
+        }, 
+
+        {
+            "governador": "@jairbolsonaro",
+            "governo": "@minsaude",
+            "estado": "Brasil"
+        }
+    ]
+}

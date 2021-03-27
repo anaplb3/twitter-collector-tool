@@ -17,13 +17,16 @@ class Report:
     def save_report(self, query, count, name, param):
         try:
             dic = self.open_json(name)
+            print(dic)
             try:
                 dic[query][param].append(count)
                 dic = self.load_json_report(dic, name)
-            except:
+            except Exception as e:
+                print("except 1: {}".format(str(e)))
                 dic[query] = {param:count}
                 dic = self.load_json_report(dic, name)
-        except:
+        except Exception as er:
+            print("except 2: {}".format(str(er)))
             dic = {}
             dic = self.load_json_report(dic, name)
             self.save_report(query,count, name, param)
@@ -61,6 +64,7 @@ class Report:
             return self.st.adjectives()
 
     def last_id_tweet(self, query, id_tweet):
+        print("id {}".format(id_tweet))
         self.save_report(query, id_tweet, 'temp', 'id')
 
     def last_id(self, query):

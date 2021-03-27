@@ -1,27 +1,27 @@
-# tweepy
+# Ana's version
+
 ## Environment:
 ```
 $ pip install -r requirements.txt
 ```
-## How to use:
-Create a file named auth.py with your own twitter api and postgresSql keys. You also have to add a boolean variable named sentiment_boolean who will define if the script will filter from saving the neutral tweets or not.
-### auth.py
-```py
-# Authentications
-consumer_key = 'your consumer key here'
-consumer_secret = 'your consumer secret here'
-access_token = 'your access token here'
-access_token_secret = 'your access token secret here'
+Create a .env file with the following fields:
+- consumerKey
+- consumerSecret
+- bearerToken
+- accessToken
+- accessTokenSecret
+- DATABASE_URL
 
-# DataBase connection keys
-dbname='your database name here'
-user='your user here'
-host='your host here' #by default postgres uses 'localhost'
-password='your password here'
-port='your port here' #by default postgres uses '5432'
+And on the terminal, set the variable ENV to 'dev'
 
-#Define the value to filter or not neutral tweets
-sentiment_boolean = True
+Windows:
+
+```set ENV=dev```
+
+Mac:
+
+```export ENV=dev```
+
 ```
 ### example.py
 ```py

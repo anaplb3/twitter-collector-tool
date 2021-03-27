@@ -1,12 +1,13 @@
-from senticnet.senticnet import SenticNet
+from senticnet.babelsenticnet import BabelSenticNet
 import codecs
 from auth import sentiment_boolean
+import csv
 
 class Sentiment():
-    def sentiment_avg(self,text):
+    def sentiment_avg(self, text):
         if sentiment_boolean == False:
             return True
-        sn = SenticNet('pt')
+        sn = BabelSenticNet('pt')
         list_polarity = []
         qtd_words = len(text)
         temp = text.split()
@@ -39,8 +40,18 @@ class Sentiment():
                 pass
 
     def adjectives(self):
-        dir_ = 'tweetcollector/layout-one.txt'
+        dir_ = 'tweetcollector/data.json'
         data = codecs.open(dir_,'r','utf8')
         list = data.readline()
         data.close()
-        return list.split(',')
+        return json.loads(json_string)
+        #return list.split(',')
+
+    def getData(self):
+        data = []
+        with open("tweetcollector/data3.csv", 'r') as file:
+            next(file)
+            reader = csv.reader(file)
+            for row in reader:
+                data.append(row)
+        return data

@@ -6,3 +6,5 @@ senticnet
 dicionario.json
 dic.json
 temp.json
+myvenv
+.env
